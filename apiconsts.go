@@ -232,6 +232,7 @@ const FailPoolExhaustedSnapshotShippingTcpPort = (806 | MaskError)
 const FailPoolExhaustedBackupShippingTcpPort = (807 | MaskError)
 
 // ## Other failures ###
+const FailEvacuating = (977 | MaskError)
 const FailBackupIncompatibleVersion = (978 | MaskError)
 const FailDependendBackup = (978 | MaskError)
 const FailSnapshotNotUptodate = (979 | MaskError)
@@ -276,6 +277,7 @@ const WarnInvldSnapshotShippingPrefix = (1016 | MaskWarn)
 const WarnNodeEvicted = (1017 | MaskWarn)
 const WarnRscDeactivated = (1018 | MaskWarn)
 const WarnBackupDlOnly = (1019 | MaskWarn)
+const WarnNotEvacuating = (1020 | MaskWarn)
 const WarnNotFound = (3000 | MaskWarn)
 
 // ## Codes 10000-19999: info ###
@@ -401,6 +403,7 @@ const ApiCmdShutdown = "Shutdown"
 const ApiNodeReconnect = "NodeReconnect"
 const ApiNodeRestore = "NodeRestore"
 const ApiNodeEvict = "NodeEvict"
+const ApiNodeEvacuate = "NodeEvacuate"
 
 // ## List object APIs ###
 const ApiLstNode = "LstNode"
@@ -434,6 +437,12 @@ const ApiExosEnclosureEvents = "ExosEvents"
 const ApiExosExec = "ExosExec"
 const ApiExosMap = "ExosMap"
 const ApiLstExtFiles = "LstExtFiles"
+const ApiNodeStats = "NodeStats"
+const ApiRscGrpStats = "RscGrpStats"
+const ApiRscDfnStats = "RscDfnStats"
+const ApiRscStats = "RscStats"
+const ApiStorPoolStats = "StorPoolStats"
+const ApiErrReportStats = "ErrReportStats"
 
 // ## Query APIs ###
 const ApiQryMaxVlmSize = "QryMaxVlmSize"
@@ -754,6 +763,7 @@ const ValSnapShipName = "SnapshotShipping"
 // ## Flag string values ###
 const FlagClean = "CLEAN"
 const FlagEvicted = "EVICTED"
+const FlagEvacuate = "EVACUATE"
 const FlagDelete = "DELETE"
 const FlagDiskless = "DISKLESS"
 const FlagQignore = "QIGNORE"
